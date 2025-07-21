@@ -37,7 +37,7 @@ This project demonstrates a scalable and resilient microservice built using **Sp
 
 ### ✅ 1. Clone and Build
 ```bash
-git clone https://github.com/your-username/scalable-resilient-microservice.git
+git clone https://github.com/nakul1504/resilient-scalable-simulation-service.git
 cd scalable-resilient-microservice
 ./mvnw clean install
 ```
@@ -47,7 +47,25 @@ cd scalable-resilient-microservice
 ./mvnw spring-boot:run
 ```
 
-### ✅ 3. Test Traffic Load
+### ✅ 3. Build & Run with Docker
+
+#### Dockerfile Steps:
+1. **Build the JAR**:
+```bash
+./mvnw clean package
+```
+
+2. **Build the Docker image**:
+```bash
+docker build -t simulation-service .
+```
+
+3. **Run the Docker container**:
+```bash
+docker run -p 8080:8080 simulation-service
+```
+
+### ✅ 4. Trigger Traffic Load
 Send a POST request to trigger the built-in load generator:
 ```bash
 curl -X POST "http://localhost:8080/api/v1/test/generate"
@@ -58,12 +76,12 @@ You can also customize:
 curl -X POST "http://localhost:8080/api/v1/test/generate?threads=20&requestsPerThread=300"
 ```
 
-### ✅ 4. Monitor Load Per Instance
+### ✅ 5. Monitor Load Per Instance
 ```bash
 curl http://localhost:8080/api/v1/metrics/load
 ```
 
-### ✅ 5. Monitor Circuit Breaker Events
+### ✅ 6. Monitor Circuit Breaker Events
 Enable actuator in `application.yml` and visit:
 ```
 http://localhost:8080/actuator/circuitbreakerevents

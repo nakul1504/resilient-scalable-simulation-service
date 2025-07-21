@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.simulation.service</groupId>
-	<artifactId>sumulation-service</artifactId>
+	<artifactId>simulation-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>sumulation-service</name>
+	<name>simulation-service</name>
 	<description>Simulation service for testing</description>
 	<url/>
 	<licenses>
