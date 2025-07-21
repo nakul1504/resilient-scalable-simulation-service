@@ -26,6 +26,6 @@ public class TrafficTriggerController {
             @RequestParam(defaultValue = "200") int requestsPerThread
     ) {
         trafficGeneratorService.generateLoad(targetUrl, threads, requestsPerThread);
-        return ResponseEntity.accepted().body(Map.of("message","✅ Traffic generation started asynchronously."));
+        return ResponseEntity.accepted().body(Map.of("message","Traffic generation started asynchronously."));
     }
 }

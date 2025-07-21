@@ -38,7 +38,7 @@ This project demonstrates a scalable and resilient microservice built using **Sp
 ### ✅ 1. Clone and Build
 ```bash
 git clone https://github.com/nakul1504/resilient-scalable-simulation-service.git
-cd scalable-resilient-microservice
+cd simulation-service
 ./mvnw clean install
 ```
 
