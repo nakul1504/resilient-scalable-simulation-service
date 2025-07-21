@@ -15,7 +15,7 @@ public class DownstreamService {
         this.loadBalancer = loadBalancer;
     }
 
-    @Async
+    @Async("taskExecutor")
     @CircuitBreaker(name = "downstreamCircuit", fallbackMethod = "fallback")
     public CompletableFuture<String> callExternalService() {
         SimulatorInstance instance = loadBalancer.getNextInstance();
