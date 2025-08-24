@@ -21,3 +21,7 @@ management:
 logging:
   level:
     io.github.resilience4j.circuitbreaker: DEBUG
+
+springdoc:
+  swagger-ui:
+    path: /docs
